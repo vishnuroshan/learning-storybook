@@ -24,6 +24,8 @@ MUIButton.propTypes = {
   variant: PropTypes.oneOf(['text', 'contained', 'outlined']),
   color: PropTypes.oneOf(['inherit', 'primary', 'info', 'warning', 'secondary', 'error', 'success']),
   onClick: PropTypes.func,
+  startIcon: PropTypes.element,
+  endIcon: PropTypes.element,
 };
 
 MUIButton.defaultProps = {
