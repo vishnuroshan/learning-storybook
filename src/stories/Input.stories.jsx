@@ -7,10 +7,11 @@ export default {
   title: 'Example/Input',
   component: Input,
   argTypes: {
-    onClick: { action: 'clicked' },
+    onClick: { action: true },
     type: {
       defaultValue: 'text',
     },
+    name: { defaultValue: 'text' },
   },
 };
 
@@ -18,6 +19,7 @@ const Template = (args) => <Input {...args} />;
 
 export const Text = Template.bind({});
 Text.args = {
+  name: 'text',
   type: 'text',
   placeholder: 'enter text here',
   label: 'name',
@@ -27,6 +29,7 @@ Text.args = {
 };
 export const Password = Template.bind({});
 Password.args = {
+  name: 'password',
   alt: 'password',
   type: 'password',
   placeholder: 'enter text here',
@@ -45,6 +48,7 @@ Password.play = async ({ args, canvasElement }) => {
 };
 export const Email = Template.bind({});
 Email.args = {
+  name: 'email',
   type: 'email',
   id: 'email-text',
   placeholder: 'enter text here',
